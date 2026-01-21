@@ -1,8 +1,6 @@
 package com.example.addon;
 
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.modules.ModuleExample;
+import com.example.addon.modules.ViperNametags;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -15,21 +13,15 @@ import org.slf4j.Logger;
 
 public class AddonTemplate extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
-    public static final Category CATEGORY = new Category("Example");
-    public static final HudGroup HUD_GROUP = new HudGroup("Example");
+    public static final Category CATEGORY = new Category("Viper");
+    public static final HudGroup HUD_GROUP = new HudGroup("Render");
 
     @Override
     public void onInitialize() {
-        LOG.info("Initializing Meteor Addon Template");
+        LOG.info("Initializing Viper Addon");
 
         // Modules
-        Modules.get().add(new ModuleExample());
-
-        // Commands
-        Commands.add(new CommandExample());
-
-        // HUD
-        Hud.get().register(HudExample.INFO);
+        Modules.get().add(new ViperNametags());
     }
 
     @Override

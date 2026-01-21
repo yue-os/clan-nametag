@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "viper-addon",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for Meteor Client addons.",
+  "name": "Viper Addon",
+  "description": "A nametag addon for Meteor Client addons.",
   "authors": [
-    "seasnail"
+    "DarkestForum"
   ],
   "contact": {
     "sources": "https://github.com/MeteorDevelopment/meteor-addon-template"

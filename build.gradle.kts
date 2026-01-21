@@ -29,6 +29,12 @@ dependencies {
     modImplementation(libs.meteor.client)
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
 tasks {
     processResources {
         val propertyMap = mapOf(
@@ -53,14 +59,8 @@ tasks {
         }
     }
 
-    java {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
-    }
-
     withType<JavaCompile> {
         options.encoding = "UTF-8"
-        options.release = 21
         options.compilerArgs.add("-Xlint:deprecation")
         options.compilerArgs.add("-Xlint:unchecked")
     }
